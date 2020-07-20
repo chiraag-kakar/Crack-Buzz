@@ -1,0 +1,7 @@
+{
+  "name": "CrackBuzz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
