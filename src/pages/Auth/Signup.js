@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import {
   IonPage,
   IonContent,
@@ -15,6 +15,8 @@ import { toast } from "../../helpers/toast";
 import useForm from "../../hooks/useForm";
 import validateSignup from "../../validators/validateSignup";
 import firebase from "../../firebase";
+
+// import ParticlesBg from 'particles-bg'
 
 const INITIAL_STATE = {
   name: "",

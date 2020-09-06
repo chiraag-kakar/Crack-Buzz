@@ -18,3 +18,4 @@ ionic start appname
 ```
 select react as framework with blank template and inegrate with capacitor which helps run the app cross platform
 
+# Crack-Buzz

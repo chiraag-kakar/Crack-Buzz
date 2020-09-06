@@ -11,7 +11,7 @@ import {
   IonButton,
 } from "@ionic/react";
 import NavHeader from "../components/Header/NavHeader";
-import { closeCircleOutline } from "ionicons/icons";
+import { trashOutline } from "ionicons/icons";
 import LinkItem from "../components/Link/LinkItem";
 import CommentModal from "../components/Link/CommentModal";
 import LinkComment from "../components/Link/LinkComment";
@@ -79,15 +79,45 @@ const Link = (props) => {
       linkRef.get().then((doc) => {
         if (doc.exists) {
           const previousVotes = doc.data().votes;
-          const vote = { votedBy: { id: user.uid, name: user.displayName } };
+          const vote = {votedBy: { id: user.uid, name: user.displayName }} ; 
+          
+
+          // const upvoteButton = document.querySelector("#upvote");
+          // const downvoteButton = document.querySelector("#downvote");
+          // const score = document.querySelector(previousVotes);
+          // const vote = type => {
+          //   const buttons = { "1": upvoteButton, "-1": downvoteButton };
+          //   const calvote = Number(score.textContent);
+          
+          //   if (buttons[type].classList.contains("active")) {
+          //     score.textContent = calvote - type;
+          //     buttons[type].classList.remove("active");
+          //   } else if (buttons[-type].classList.contains("active")) {
+          //     score.textContent = calvote + 2 * type;
+          //     buttons[-type].classList.remove("active");
+          //     buttons[type].classList.add("active");
+          //   } else {
+          //     score.textContent = calvote + type;
+          //     buttons[type].classList.add("active");
+          //   }
+          // };
+          
+          // upvoteButton.addEventListener("click", () => vote(1));
+          // downvoteButton.addEventListener("click", () => vote(-1));
+        
+         
           const updatedVotes = [...previousVotes, vote];
           const voteCount = updatedVotes.length;
+
           linkRef.update({ votes: updatedVotes, voteCount });
+
           setLink((prevState) => ({
             ...prevState,
             votes: updatedVotes,
             voteCount: voteCount,
           }));
+
+
         }
       });
     }
@@ -120,7 +150,7 @@ const Link = (props) => {
       <NavHeader
         title={link && link.description}
         option={link && postedByAuthUser(link)}
-        icon={closeCircleOutline}
+        icon={trashOutline}
         action={handleDeleteLink}
       />
       <IonContent>
@@ -136,9 +166,12 @@ const Link = (props) => {
               <IonRow>
                 <IonCol class="ion-text-center">
                   <LinkItem link={link} browser={openBrowser} />
-                  <IonButton onClick={() => handleAddVote()} size="small">
+                  <IonButton onClick={() => handleAddVote()} size="small" id="upvote">
                     Upvote
                   </IonButton>
+                  {/* <IonButton onClick={() => handleAddVote()} size="small" id="downvote">
+                    Downvote
+                  </IonButton> */}
                   <IonButton onClick={() => handleOpenModal()} size="small">
                     Comment
                   </IonButton>

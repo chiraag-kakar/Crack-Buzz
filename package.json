@@ -19,6 +19,7 @@
     "date-fns": "^2.16.1",
     "firebase": "^7.19.1",
     "ionicons": "^5.1.2",
+    "particles-bg": "^2.5.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router": "^5.1.2",
