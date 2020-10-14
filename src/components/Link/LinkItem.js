@@ -78,7 +78,8 @@ const LinkItem = ({ link, index, showCount, url, browser }) => {
                     verticalAlign: "middle",
                   }}
                 >
-                  {link.voteCount} upvotes
+                  {link.voteCount} upvotes             
+                  {/* element to be queried */}
                 </IonText>
                 {" | "}
                 <IonIcon
