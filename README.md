@@ -1,21 +1,8 @@
-```
-npm install -g @ionic/cli
-```
+![](https://github.com/chiraag-kakar/Crack-Buzz/blob/master/crackbuzz.png)
 
-sign up for firebase and install firebase cli globally
 
-```
-npm install -g firebase-tools
-```
-
-You may also need to authenticate yourself with the credentials of your firebase account
-
-# Start the project
-```
-cd desktop && mkdir project
-cd project
-ionic start appname
-```
-select react as framework with blank template and inegrate with capacitor which helps run the app cross platform
-
-# Crack-Buzz
+![](https://img.shields.io/github/license/chiraag-kakar/Crack-Buzz?style=for-the-badge)
+![](https://img.shields.io/tokei/lines/github/chiraag-kakar/Crack-Buzz?label=Lines%20of%20Code&style=for-the-badge)
+![](https://img.shields.io/github/issues-raw/chiraag-kakar/Crack-Buzz?color=orange&style=for-the-badge)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=for-the-badge)](https://github.com/chiraag-kakar/Crack-Buzz/pulls)
+![](https://img.shields.io/github/issues-pr/chiraag-kakar/Crack-Buzz?style=for-the-badge)
